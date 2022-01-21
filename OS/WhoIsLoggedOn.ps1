@@ -1,1 +1,1 @@
-﻿Get-WmiObject –ComputerName WX-5CG9121WJ0 –Class Win32_ComputerSystem | Select-Object UserName
+﻿Get-WmiObject –ComputerName Domain-PC1 –Class Win32_ComputerSystem | Select-Object UserName
