@@ -1,0 +1,1 @@
+﻿get-aduser -filter {Company -like "OMY"} -Properties Company, Name, EmployeeID | select Company, Name, EmployeeID
