@@ -2,7 +2,7 @@
 Param(
 #  [Parameter(Mandatory=$True,Position=1)]
     [Parameter(Mandatory=$false,Position=1)]
-    [string]$WebService = "https://office.intra/adtools/adtoolbox.asmx",
+    [string]$WebService = "https://mydomain/adtools/adtoolbox.asmx",
     
     [Parameter(Mandatory=$false)]
     [switch]$dbg = $false
@@ -53,7 +53,7 @@ write-host "Try to move in staging OU : $($NewComputerOU)"
 if (!( [System.Uri]::TryCreate($WebService,[System.UriKind]::Absolute,[ref]$res)))
 {
     # use default value 
-    [string]$WebService = "https://office.intra/adtools/adtoolbox.asmx"
+    [string]$WebService = "https://mydomain/adtools/adtoolbox.asmx"
 
 }
 # -----------------------------------------------------------------------------
