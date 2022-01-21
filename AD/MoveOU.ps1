@@ -32,12 +32,12 @@ else
 }
 # -----------------------------------------------------------------------------
 # define New OU
-$NewComputerOU = ($CurrentADSIData.path -replace ("V4","V5")) -Replace "CN=$CurrentHostName,", ""
-if($NewComputerOU.Contains("OU=_Computers_v5_pilot")) {
-	$NewComputerOU = $NewComputerOU -Replace "OU=_Computers_v5_pilot" , "OU=_Computers_v5_staging"	
+$NewComputerOU = ($CurrentADSIData.path -replace ("V1","V2")) -Replace "CN=$CurrentHostName,", ""
+if($NewComputerOU.Contains("OU=_Computers_v3_temp")) {
+	$NewComputerOU = $NewComputerOU -Replace "OU=_Computers_v3_temp" , "OU=_Computers_v3_working"	
 }
 else {
-	$NewComputerOU = $NewComputerOU -Replace "OU=Computers_v5" , "OU=_Computers_v5_staging,OU=Computers_v5"
+	$NewComputerOU = $NewComputerOU -Replace "OU=Computers_v4" , "OU=_Computers_v4_staging,OU=Computers_v4"
 }
 
 # -----------------------------------------------------------------------------
