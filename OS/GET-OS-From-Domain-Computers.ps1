@@ -1,0 +1,1 @@
+﻿get-adcomputer  -Filter * -properties operatingsystem | ?{$_.operatingsystem -like '*windows 10 enterprise*'} | Export-CSV -Path C:\Temp\export.csv | Select-Object Name,DistinguishedName, DNSHostName, OperatingSystem, Username
